@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4250704C24AF35A00083A8C9 /* KTLuaCChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4250704A24AF35A00083A8C9 /* KTLuaCChannel.cpp */; };
 		42F4382424AE0EFB00DD135C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F4382324AE0EFB00DD135C /* AppDelegate.m */; };
 		42F4382724AE0EFB00DD135C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F4382624AE0EFB00DD135C /* SceneDelegate.m */; };
-		42F4382A24AE0EFB00DD135C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F4382924AE0EFB00DD135C /* ViewController.m */; };
+		42F4382A24AE0EFB00DD135C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42F4382924AE0EFB00DD135C /* ViewController.mm */; };
 		42F4382D24AE0EFB00DD135C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F4382B24AE0EFB00DD135C /* Main.storyboard */; };
 		42F4382F24AE0EFC00DD135C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F4382E24AE0EFC00DD135C /* Assets.xcassets */; };
 		42F4383224AE0EFC00DD135C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F4383024AE0EFC00DD135C /* LaunchScreen.storyboard */; };
@@ -50,13 +51,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4250704A24AF35A00083A8C9 /* KTLuaCChannel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KTLuaCChannel.cpp; sourceTree = "<group>"; };
+		4250704B24AF35A00083A8C9 /* KTLuaCChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTLuaCChannel.h; sourceTree = "<group>"; };
 		42F4381F24AE0EFB00DD135C /* KTLuaCChannel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTLuaCChannel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F4382224AE0EFB00DD135C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		42F4382324AE0EFB00DD135C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		42F4382524AE0EFB00DD135C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		42F4382624AE0EFB00DD135C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		42F4382824AE0EFB00DD135C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		42F4382924AE0EFB00DD135C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		42F4382924AE0EFB00DD135C /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		42F4382C24AE0EFB00DD135C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42F4382E24AE0EFC00DD135C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42F4383124AE0EFC00DD135C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,13 +156,15 @@
 		42F4382124AE0EFB00DD135C /* KTLuaCChannel */ = {
 			isa = PBXGroup;
 			children = (
+				4250704B24AF35A00083A8C9 /* KTLuaCChannel.h */,
+				4250704A24AF35A00083A8C9 /* KTLuaCChannel.cpp */,
 				42F4383B24AE0F5B00DD135C /* Lua_5.3.5 */,
 				42F4382224AE0EFB00DD135C /* AppDelegate.h */,
 				42F4382324AE0EFB00DD135C /* AppDelegate.m */,
 				42F4382524AE0EFB00DD135C /* SceneDelegate.h */,
 				42F4382624AE0EFB00DD135C /* SceneDelegate.m */,
 				42F4382824AE0EFB00DD135C /* ViewController.h */,
-				42F4382924AE0EFB00DD135C /* ViewController.m */,
+				42F4382924AE0EFB00DD135C /* ViewController.mm */,
 				42F4382B24AE0EFB00DD135C /* Main.storyboard */,
 				42F4382E24AE0EFC00DD135C /* Assets.xcassets */,
 				42F4383024AE0EFC00DD135C /* LaunchScreen.storyboard */,
@@ -318,7 +323,7 @@
 				42F4387C24AE0F6D00DD135C /* liolib.c in Sources */,
 				42F4389424AE0F6D00DD135C /* lcorolib.c in Sources */,
 				42F4388724AE0F6D00DD135C /* linit.c in Sources */,
-				42F4382A24AE0EFB00DD135C /* ViewController.m in Sources */,
+				42F4382A24AE0EFB00DD135C /* ViewController.mm in Sources */,
 				42F4382424AE0EFB00DD135C /* AppDelegate.m in Sources */,
 				42F4388E24AE0F6D00DD135C /* loslib.c in Sources */,
 				42F4389D24AE0F6D00DD135C /* ltm.c in Sources */,
@@ -338,6 +343,7 @@
 				42F4388424AE0F6D00DD135C /* lstrlib.c in Sources */,
 				42F4389624AE0F6D00DD135C /* ltablib.c in Sources */,
 				42F4389124AE0F6D00DD135C /* ldblib.c in Sources */,
+				4250704C24AF35A00083A8C9 /* KTLuaCChannel.cpp in Sources */,
 				42F4388024AE0F6D00DD135C /* lmathlib.c in Sources */,
 				42F4389E24AE0F6D00DD135C /* ldo.c in Sources */,
 				42F4388824AE0F6D00DD135C /* lstring.c in Sources */,
