@@ -60,6 +60,7 @@ NULL, NULL, 0
 
 namespace KT {
     lua_State *OpenLuaState();
+    void OpenLibs(lua_State *);
     void CloseLuaState(lua_State *l);
     void EvaluateScriptInLua(lua_State *state, const char *luaScript);
     void RegisterNativeFuntionToLua(lua_State *state, const char *funcName, lua_CFunction funcPtr);

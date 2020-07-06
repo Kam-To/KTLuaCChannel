@@ -11,8 +11,11 @@
 
 lua_State *KT::OpenLuaState() {
     lua_State *state = luaL_newstate();
-    luaL_openlibs(state);
     return state;
+}
+
+void KT::OpenLibs(lua_State *state) {
+    luaL_openlibs(state);
 }
 
 void KT::CloseLuaState(lua_State *l) {

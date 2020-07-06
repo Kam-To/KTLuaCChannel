@@ -35,8 +35,8 @@ KTLuaCreateMeta(
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self LuaCallNativeFunction];
-    [self NativeCallLuaFunction];
+    [self callingByEachOhter];
+    [self interactWithCPPObject];
 }
 
 static int KTNativeFunction(lua_State *state) {
@@ -49,19 +49,25 @@ static int KTNativeFunction(lua_State *state) {
     return 0; // return count anything
 }
 
-- (void)LuaCallNativeFunction {
+- (void)callingByEachOhter {
     lua_State *state = KT::OpenLuaState();
-    
+    KT::OpenLibs(state);
     const char *functionInLuaName = "callingInLua";
     KT::RegisterNativeFuntionToLua(state, functionInLuaName, KTNativeFunction);
     
-    const char *script = "callingInLua(32, \"string\");";
-    KT::EvaluateScriptInLua(state, script);
+    const char *script = R"(
+    callingInLua(32, "string"); -- here Lua call C function
     
+    function callByNativeNoParameter() -- define Lua function here, call by C later
+        print("Just print something.");
+    end
+    )";
+    KT::EvaluateScriptInLua(state, script);
+    KT::CallLuaFunction(state, "callByNativeNoParameter", KTLuaWrappedNull());
     KT::CloseLuaState(state);
 }
 
-- (void)NativeCallLuaFunction {
+- (void)interactWithCPPObject {
     
     lua_State *state = KT::OpenLuaState();
     const char *script = R"(
@@ -76,15 +82,8 @@ static int KTNativeFunction(lua_State *state) {
         local b = obj:boolMember();
         obj:boolMember(true);
     end
-    
-    function callByNativeNoParameter()
-        print("Just print something.");
-    end
     )";
-
     KT::EvaluateScriptInLua(state, script);
-    
-    KT::CallLuaFunction(state, "callByNativeNoParameter", KTLuaWrappedNull());
     
     NativeObject *obj = new NativeObject();
     obj->floatMember = 7.0;
